@@ -64,22 +64,22 @@ const GardenList = (props) => {
   return (
     <div>
       <div>
+        <h6>Lista de Jardines</h6>
+        <div className="d-flex justify-content">
+          {gardens.map((garden, _) => (
+                <Garden garden={garden} removeGarden={removeGarden}></Garden>
+            ))}
+        </div>
+      </div >
+      <br />
+      <div>
         <h6>Crear un nuevo Jardin</h6>
         <Form addGarden={addGarden} initialFormState={initialFormState}></Form>
       </div>
-      <br />
-      <div>
-        <h6>Lista de Jardines</h6>
-        {
-          gardens.map((garden, index) => (
-            <div key={index}>
-              <Garden title={garden.title} address={garden.address} removeGarden={removeGarden}></Garden>
-            </div>
-          ))
-        }
-      </div >
     </div>
   )
 }
 
 export default GardenList
+
+//Garden key={index} title={garden.title} address={garden.address} removeGarden={removeGarden}></Garden>
