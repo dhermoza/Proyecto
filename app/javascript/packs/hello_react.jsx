@@ -5,22 +5,40 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import Form from './Form'
+import Garden from './Garden'
+import GardenList from './GardenList'
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
+const Hello = ({name, dataset}) =>  {
+  const saludar = () => {
+    console.log("holi")
+  }
+
+return (
+  <div className="container">
+    <div>
+      <div className="d-flex justify-content-between">Hello {name}!</div>
+
+    </div>
+  </div>
 )
-
-Hello.defaultProps = {
-  name: 'David'
 }
+//<button onClick={saludar}>Crear un nuevo jardín</button>
+//Hello.defaultProps = {
+ // name: 'David'
+//}
 
-Hello.propTypes = {
-  name: PropTypes.string
-}
+//Hello.propTypes = {
+//  name: PropTypes.string
+//}
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Hello name="React" />,
-    document.body.appendChild(document.createElement('div')),
-  )
+  const node = document.querySelector("#root");
+  if (node) {
+    ReactDOM.render(
+      <div>
+        <GardenList></GardenList>
+      </div>
+      , node);
+  }
 })

@@ -4,9 +4,11 @@ class Api::V1::GardensController < Api::V1::BaseController
 
   def index
     @gardens = policy_scope(Garden)
+    render json: @gardens
   end
 
   def show
+    render json: @gardens
   end
 
   def update

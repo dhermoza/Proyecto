@@ -1,3 +1,9 @@
-<%= javascript_pack_tag 'hello_react' %>
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+
+<div class="container">
+  <h1>Garden React App</h1>
+  <div id="root" name="Denise" data-gardens=<%= @gardens.to_json %>></div>
+</div>
+<% content_for :after_js do %>
+  <%= javascript_pack_tag "hello_react" %>
+<% end %>

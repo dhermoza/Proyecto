@@ -23,8 +23,8 @@ garden4 = user.gardens.find_or_initialize_by(title: 'Jardin Botanico de Montreal
 
 user2.save
 
-nenufar = garden3.plants.find_or_initialize_by(name: 'Victoria amazonica', description: 'nenúfar; es el más grande de todos los nenúfares, nativo de las aguas poco profundas del río Amazonas')
-orchid = garden3.plants.find_or_initialize_by(name: 'Tropical orchid', description: 'Las orquídeas u orquidáceas son una familia de plantas monocotiledóneas que se distinguen por la complejidad de sus flores')
+#nenufar = garden3.plants.find_or_initialize_by(name: 'Victoria amazonica', description: 'nenúfar; es el más grande de todos los nenúfares, nativo de las aguas poco profundas del río Amazonas')
+#orchid = garden3.plants.find_or_initialize_by(name: 'Tropical orchid', description: 'Las orquídeas u orquidáceas son una familia de plantas monocotiledóneas que se distinguen por la complejidad de sus flores')
 garden4.save
 
 p "Seeds creados"
