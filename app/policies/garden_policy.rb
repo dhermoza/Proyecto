@@ -8,4 +8,16 @@ class GardenPolicy < ApplicationPolicy
   def show?
     true
   end
+
+  def update?
+    record.user == user
+  end
+
+  def create?
+    user.present?
+  end
+
+  def destroy?
+    update?
+  end
 end
